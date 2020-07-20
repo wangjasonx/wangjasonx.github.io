@@ -1,0 +1,91 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: rgba(72, 61, 139, .9);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.logo {
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 22px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 30px;
+}
+
+.nav-links a:hover{
+    background-color: darkslateblue;
+}
+
+.clock{
+    position: relative;
+    padding: 10px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 3px 3px black;
+    text-align: center;
+    font-size: 8vw;
+    letter-spacing: 0.2vw;
+    display:block;
+}
+
+.clock #DateDisplay {
+    text-align: center;
+    font-size: 3vw;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: darkslateblue;
+    color: white;
+    text-align: center;
+    min-height: 5vh;
+}
+
+.footer p{
+    padding-top: 15px;
+}
