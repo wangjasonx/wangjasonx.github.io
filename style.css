@@ -5,23 +5,26 @@
 }
 
 html, body {
-    height: 100%;
-    background-color: black;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
+div {
+    display: block;
+}
+
 nav {
     position: fixed;
+    z-index: 100;
     width: 100%;
     top: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color: rgba(72, 61, 139, .9);
+    background-color: rgba(72, 61, 139, 1);
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
 }
@@ -56,36 +59,53 @@ nav {
     background-color: darkslateblue;
 }
 
-.clock{
-    position: relative;
-    padding: 10px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+.clock-wrapper{
+    padding: 38vh;
+    background-color: darkslategray;
+}
+
+.clock {
     color: white;
-    text-shadow: 3px 3px black;
     text-align: center;
     font-size: 8vw;
     letter-spacing: 0.2vw;
-    display:block;
+    display: block;
+    text-shadow: 3px 3px black;
+    animation: pulse 2s infinite;
 }
 
 .clock #DateDisplay {
-    text-align: center;
     font-size: 3vw;
 }
 
+.new-div {
+    padding: 46.45vh;
+}
+.new-div.red {
+    background-color: red;
+}
+
+.new-div.purple {
+    background-color: purple;
+}
+
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    position: absolute;
     width: 100%;
     background-color: darkslateblue;
     color: white;
     text-align: center;
-    min-height: 5vh;
+    min-height: 50px;
 }
 
-.footer p{
-    padding-top: 15px;
+
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.97);
+    }
 }
