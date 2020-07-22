@@ -9,7 +9,7 @@ particlesJS("particles-js",
         }
       },
       "color": {
-        "value": "#fc0000"
+        "value": "#e33504"
       },
       "shape": {
         "type": "circle",
@@ -27,7 +27,7 @@ particlesJS("particles-js",
         }
       },
       "opacity": {
-        "value": 0.8,
+        "value": 1,
         "random": true,
         "anim": {
           "enable": false,
@@ -67,7 +67,7 @@ particlesJS("particles-js",
           "detect_on": "canvas", 
           "events": { 
             "onhover": { 
-              "enable": false, 
+              "enable": true, 
               "mode": "bubble" 
             }, 
             "onclick": { 
