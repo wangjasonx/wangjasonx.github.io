@@ -19,7 +19,6 @@ html, body {
 
 .main-page-wrap {
     min-height: 100%;
-    margin-bottom: -50px;
 }
 
 #particles-js { 
@@ -101,11 +100,10 @@ nav {
 .footer {
     position: absolute;
     width: 100%;
-    background-color: var(--background-color);;
     color: var(--text-color);
     text-align: center;
     padding-top: 18px;
-    bottom: 0;
+    bottom: 0px;
     height: 50px;
 }
 
