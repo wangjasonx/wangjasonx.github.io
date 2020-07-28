@@ -37,7 +37,7 @@
         <section>
             <div class="main-container">
                 <div class="greeting-wrapper">
-                    <h1>Hi I'm Jason Wang</h1>
+                    <h1>Hi I'm Jason!</h1>
                 </div>
 
                 <div class="intro-wrapper">
@@ -45,10 +45,10 @@
                         <img id="profile-pic" src="images/umaru_cry.png">
                         <h5>Change the theme!</h5>
                         <div class="theme-options-wrapper">
-                            <div id="light-mode" class="theme-dot"></div>
-                            <div id="dark-mode" class="theme-dot"></div>
-                            <div id="green-mode" class="theme-dot"></div>
-                            <div id="purple-mode" class="theme-dot"></div>
+                            <div data-mode="light" id="light-mode" class="theme-dot"></div>
+                            <div data-mode="dark" id="dark-mode" class="theme-dot"></div>
+                            <div data-mode="green" id="green-mode" class="theme-dot"></div>
+                            <div data-mode="pink" id="pink-mode" class="theme-dot"></div>
                         </div>
 
                         <p id="note">Theme settings will be saved for <br>your next visit</p>
@@ -80,6 +80,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="app.js"></script>
+    <script src="themes.js"></script>
 </body>
 
 </html>

@@ -1,9 +1,11 @@
 :root {
     --background-color: black;
-    --text-color: gray;
+    --nav-text-color: gray;
     --themeDotBorder: black;
     --previewBg: rgb(251, 249, 243, 0.8);
     --previewShadow: #f0ead6;
+    --wrapperColor: white;
+    --textColor: black;
 }
 
 *{
@@ -18,6 +20,10 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+body *{
+    transition: 0.3s;
 }
 
 h1 { font-size: 56px;}
@@ -62,7 +68,7 @@ nav {
 }
 
 .logo {
-    color: var(--text-color);
+    color: var(--nav-text-color);
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 24px;
@@ -79,7 +85,7 @@ nav {
 }
 
 .nav-links a{
-    color: var(--text-color);
+    color: var(--nav-text-color);
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
@@ -103,18 +109,25 @@ nav {
     text-align: center;
     align-content: center;
     min-height: 3em;
-    color: white;
+    background-color: var(--wrapperColor);
+    color: var(--textColor);
     font-size: 50px;
+    border: 2px solid var(--textColor);
+    border-bottom: 8px solid var(--textColor);
+    border-radius: 5px 5px 0px 0px;
 }
 
 .intro-wrapper {
-    background-color: white;
+    background-color: var(--wrapperColor);
 
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
         'left-column right-column'
     ;
+
+    border: 2px solid var(--textColor);
+    border-radius: 0px 0px 5px 5px;
 }
 
 .intro-wrapper h5 {
@@ -130,6 +143,7 @@ nav {
     grid-area: left-column;
     padding-top: 50px;
     padding-bottom: 50px;
+    color: var(--textColor);
 }
 
 #profile-pic {
@@ -163,6 +177,8 @@ nav {
 }
 
 .theme-dot:hover {
+    height: 40px;
+    width: 40px;
     border-width: 5px;
 }
 
@@ -178,7 +194,7 @@ nav {
     background-color: lightgreen;
 }
 
-#purple-mode {
+#pink-mode {
     background-color: lightpink;
 }
 
