@@ -14,7 +14,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    transition: all 0.5s ease-in-out;
+    transition: 0.2s;
+    overflow: hidden;
 }
 
 #page-scroll {
@@ -198,6 +199,7 @@ body {
 .introduction-wrap {
     position: relative;
     height: 100%;
+    transition: all 0.5s ease-out;
 }
 
 .introduction{
@@ -264,12 +266,15 @@ body {
 
 .scroll-down {
     position: absolute;
-    bottom: 30px;
-    left: 50%;
+    right: 25px;
+    top: 10%;
     transform: rotate(270deg);
     color: white;
     font-size: small;
     transition: all 0.5s;
+    z-index: 10;
+    height: 0;
+    width: 0;
 }
 
 .scroll-down #text {
@@ -278,6 +283,28 @@ body {
 }
 
 .scroll-down #arrow {
+    position: absolute;
+    animation: bounce 2s infinite;
+}
+
+.scroll-up {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    transform: rotate(90deg);
+    color: white;
+    font-size: small;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.scroll-up #text {
+    position: relative;
+    left: 50px;
+}
+
+.scroll-up #arrow {
     position: absolute;
     animation: bounce 2s infinite;
 }
