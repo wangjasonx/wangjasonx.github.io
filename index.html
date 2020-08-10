@@ -9,9 +9,10 @@
 </head>
 <body>
     <div class="main-page-container">
-        <div class="greeting-container">
 
-            <div id="particles-js"></div>
+        <div id="page-scroll"></div>
+
+        <div class="greeting-container">
             <section>
                 <div class="nav-wrap">
                     <div class="hamburger">
@@ -43,16 +44,26 @@
                     </div>
                 </div>
             </section>
+            <div id="particles-js"></div>
+            <div class="introduction-wrap">
 
-            
-            <div class="introduction">
-                <p><strong>Jason Wang</strong></p>
-                <p id="footnote">Welcome to my website</p>
-                <button type="button">Learn More</button>
+                <div class="post-intro">
+                    <p>HELLO <br> I AM POTATO</p>
+                </div>
+                <div class="introduction">
+                    <p><strong>Jason Wang</strong></p>
+                    <p id="footnote">Welcome to my website</p>
+                    <button type="button" id="test" onclick="moveThings();">Learn More</button>
+                </div>
+
+                <div class="scroll-down">
+                    <span id="arrow">← &nbsp</span>
+                    <span id="text">Scroll</span>
+                </div>
             </div>
-
             <div class="background-change"></div>
 
+    
             <div class="background-modal-wrap">
                 <div class="modal">
                     <span class="modal-close"><strong>X</strong></span>
@@ -86,7 +97,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
 
         
@@ -95,5 +105,6 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
     <script src="backgrounds.js"></script>
+    <script src="parallax.js"></script>
 </body>
 </html>

@@ -17,14 +17,23 @@ body {
     transition: all 0.5s ease-in-out;
 }
 
+#page-scroll {
+    position: absolute;
+    height: 200%;
+    width: 100%;
+}
+
 .greeting-container {
-    position: relative;
-    margin: 4em auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: rgba(44, 44, 44, 1);
     width: 92%;
     height: 800px;
     border: 1px solid white;
     z-index: 0;
+    overflow: hidden;
 }
 
 #particles-js { 
@@ -186,6 +195,11 @@ body {
     height: 200px;
 }
 
+.introduction-wrap {
+    position: relative;
+    height: 100%;
+}
+
 .introduction{
     display: flex;
     flex-direction: column;
@@ -197,6 +211,21 @@ body {
     height: 100%;
     font-size: 82px;
     transition: font-size 0.4s;
+    z-index: 3;
+}
+
+.post-intro {
+    position: absolute;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 82px;
     z-index: 3;
 }
 
@@ -233,14 +262,35 @@ body {
     cursor: pointer;
 }
 
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: rotate(270deg);
+    color: white;
+    font-size: small;
+    transition: all 0.5s;
+}
+
+.scroll-down #text {
+    position: absolute;
+    left: 50px;
+}
+
+.scroll-down #arrow {
+    position: absolute;
+    animation: bounce 2s infinite;
+}
+
 .background-change:hover {
     border: 1px solid orange;
 }
 
 .background-modal-wrap {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100vh;
     background-color: rgba(44, 44, 44, 0.9);
@@ -324,6 +374,16 @@ body {
 .img-container img:hover {
     transform: scale(1.5);
     transition: all 0.5s;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translate(0px);
+    }
+
+    50% {
+        transform: translate(20px);
+    }
 }
 
 @media screen and (max-width: 1200px) {

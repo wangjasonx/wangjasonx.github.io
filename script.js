@@ -26,7 +26,6 @@ modalCloseBtn.addEventListener('click', () => {
   closeModal();
 });
 
-
 /*Function to close the modal*/
 
 function closeModal() {
