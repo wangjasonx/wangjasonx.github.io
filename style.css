@@ -230,6 +230,7 @@ body {
     color: black;
     font-size: 82px;
     z-index: 3;
+    overflow: hidden;
 }
 
 .post-intro .about-tag {
