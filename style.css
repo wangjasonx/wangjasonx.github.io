@@ -264,7 +264,7 @@ body {
 
 .post-intro .about-container {
     position: relative;
-    height: 100%;
+
     width: 100%;
     display: flex;
     align-items: center;
@@ -554,15 +554,23 @@ body {
     .post-intro .description-wrap {
         margin: 100px;
         width: 400px;
-        height: 200px;
+        height: 300px;
     }
 
     .post-intro .about-container .description-wrap h5 {
         font-size: 50px;
+        padding: 0px;
     }
 
     .post-intro .about-container .description-wrap p {
         font-size: 20px;
+        margin: 0px;
+    }
+
+    .post-intro .about-container .description-wrap button {
+        margin: 0;
+        padding: 10px 15px;
+        font-size: 15px;
     }
 }
 
