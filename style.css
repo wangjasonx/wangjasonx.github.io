@@ -516,6 +516,7 @@ body {
         font-size: 20px;
         width: 100px;
         transition: 0.5s;
+        top: 110px;
     }
 
     .post-intro .about-container .img-shadow {
@@ -537,7 +538,7 @@ body {
     }
 
     .post-intro .about-container .description-wrap h5 {
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .post-intro .about-container .description-wrap p {
@@ -550,6 +551,7 @@ body {
         font-size: 15px;
     }
     .nav-wrap {
+        top: 70px;
         margin-left: 85%;
         transition: margin-left 0.4s;
     }
@@ -578,5 +580,39 @@ body {
         padding: 0.5em;
         font-size: 10px;
     }
+
 }
 
+@media screen and (max-width: 500px) {
+
+    .go-back {
+        bottom: 80px;
+    }
+    
+    .background-change {
+        bottom: 80px;
+    }
+
+    .post-intro .about-container {
+        padding-top: 20%;
+    }
+
+    .post-intro .about-container .description-wrap{
+        margin-top: -45%;
+    }
+
+    .post-intro .about-container .description-wrap h5 {
+        font-size: 20px;
+    }
+
+    .post-intro .about-container .description-wrap p {
+        font-size: 10px;
+        margin-bottom: -50px;
+    }
+
+    .post-intro .about-container .description-wrap button {
+        margin: 0;
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+}
