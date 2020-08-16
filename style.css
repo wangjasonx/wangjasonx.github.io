@@ -160,8 +160,8 @@ body {
 .nav-wrap .menu > div {
     background: rgba(44, 44, 44, 0.9);
     border-radius: 50%;
-    width: 110vw;
-    height: 110vw;
+    width: 150vw;
+    height: 150vw;
     display: flex;
     flex: none;
     align-items: center;
@@ -250,7 +250,7 @@ body {
 
 .post-intro .about-tag {
     position: absolute;
-    top: 30px;
+    top: 40px;
     left: 50px;
     width: 200px;
     text-align: left;
@@ -264,7 +264,6 @@ body {
 
 .post-intro .about-container {
     position: relative;
-
     width: 100%;
     display: flex;
     align-items: center;
@@ -273,8 +272,8 @@ body {
 }
 
 .post-intro .img-shadow {
-    width: 640px;
-    height: 480px;
+    width: 32vw;
+    height: 50vh;
     padding-left: 25px;
     padding-top: 25px;
     background-color: rgba(44, 44, 44, 0.5);
@@ -282,21 +281,24 @@ body {
 }
 
 .post-intro .img-wrap img{
-    width: 640px;
-    height: 480px;
+    width: 32vw;
+    height: 50vh;
     border: 2px solid white;
 }
 
 .post-intro .description-wrap {
     position: relative;
-    width: 1000px;
-    height: 500px;
     color: white;
 }
 
 .post-intro .description-wrap p {
-    padding-top: 50px;
-    font-size: 30px;
+    padding-top: 20px;
+    font-size: 1.4vw;
+    /* font-size: 30px; */
+}
+
+.post-intro .description-wrap h5 {
+    font-size: 3vw;
 }
 
 .post-intro .description-wrap button {
@@ -351,53 +353,54 @@ body {
     cursor: pointer;
 }
 
-.scroll-down {
+.background-change > span {
     position: absolute;
-    right: 25px;
-    top: 10%;
-    transform: rotate(270deg);
+    font-size: 10px;
+    font-weight: bold;
+    width: 200px;
+    margin-left: 35px;
+    margin-top: 5px;
     color: white;
-    font-size: small;
-    transition: all 0.5s;
-    z-index: 10;
-    height: 0;
-    width: 0;
-}
-
-.scroll-down #text {
-    position: absolute;
-    left: 50px;
-}
-
-.scroll-down #arrow {
-    position: absolute;
-    animation: bounce 2s infinite;
-}
-
-.scroll-up {
-    position: absolute;
-    bottom: 70px;
-    right: 0;
-    transform: rotate(90deg);
-    color: white;
-    font-size: small;
-    visibility: hidden;
     opacity: 0;
-    transition: all 0.5s;
-}
-
-.scroll-up #text {
-    position: relative;
-    left: 50px;
-}
-
-.scroll-up #arrow {
-    position: absolute;
-    animation: bounce 2s infinite;
+    visibility: hidden;
+    transition: 0.5s;
 }
 
 .background-change:hover {
     border: 1px solid orange;
+}
+
+.background-change:hover > span {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+}
+
+.go-back {
+    position: absolute;
+    font-size: 12px;
+    font-weight: bold;
+    width: 100px;
+    height: 30px;
+    bottom: 20px;
+    right: 2px;
+    color: white;
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+    animation: bounce 3s infinite;
+}
+
+.go-back:hover {
+    color: orange;
+    animation: none;
+}
+
+.go-back.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
 }
 
 .background-modal-wrap {
@@ -413,10 +416,8 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
-
     visibility: hidden;
     opacity: 0;
-
     transition: opacity 0.5s;
 }
 
@@ -492,41 +493,11 @@ body {
 
 @keyframes bounce {
     0%, 100% {
-        transform: translate(0px);
+        transform: translateX(-10px);
     }
 
     50% {
-        transform: translate(20px);
-    }
-}
-
-@media screen and (max-width: 1400px) {
-    .post-intro .about-container {
-        padding-top: 300px;
-        flex-direction: column;
-        overflow-y: auto;
-    }
-
-    .post-intro .about-container .img-shadow {
-        width: 340px;
-        height: 280px;
-    }
-
-    .post-intro .about-container .img-wrap img {
-        width: 340px;
-        height: 280px;
-    }
-
-    .post-intro .description-wrap {
-        margin:100px;
-    }
-
-    .post-intro .about-container .description-wrap h5 {
-        font-size: 50px;
-    }
-
-    .post-intro .about-container .description-wrap p {
-        font-size: 20px;
+        transform: translateX(10px);
     }
 }
 
@@ -536,35 +507,41 @@ body {
     }
 
     .post-intro .about-container {
-        padding-top: 300px;
+        padding-top: 50%;
         flex-direction: column;
         overflow-y: auto;
     }
 
+    .post-intro .about-tag {
+        font-size: 20px;
+        width: 100px;
+        transition: 0.5s;
+    }
+
     .post-intro .about-container .img-shadow {
-        width: 340px;
-        height: 280px;
+        opacity: 1;
+        visibility: hidden;
+        width: 80%;
+        
     }
 
     .post-intro .about-container .img-wrap img {
-        width: 340px;
-        height: 280px;
+        visibility: visible;
+        width: 80%;
+        height: 80%;
     }
 
     .post-intro .description-wrap {
-        margin: 100px;
-        width: 400px;
-        height: 300px;
+        width: 100%;
+        margin: 15%;
     }
 
     .post-intro .about-container .description-wrap h5 {
-        font-size: 50px;
-        padding: 0px;
+        font-size: 30px;
     }
 
     .post-intro .about-container .description-wrap p {
         font-size: 20px;
-        margin: 0px;
     }
 
     .post-intro .about-container .description-wrap button {
@@ -572,9 +549,6 @@ body {
         padding: 10px 15px;
         font-size: 15px;
     }
-}
-
-@media screen and (max-width: 950px) {
     .nav-wrap {
         margin-left: 85%;
         transition: margin-left 0.4s;
@@ -594,9 +568,6 @@ body {
         display: block;
     }
 
-    .nav-links li {
-        margin: 0;
-    }
 
     .nav-links img {
         position: absolute;
