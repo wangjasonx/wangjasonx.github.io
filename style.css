@@ -45,7 +45,7 @@ body {
     transform: translate(-50%, -50%);
     background-color: rgba(44, 44, 44, 1);
     width: 92%;
-    height: 800px;
+    height: 92%;
     border: 1px solid white;
     z-index: 0;
     overflow: hidden;
